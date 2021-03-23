@@ -23,7 +23,7 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
 
 
 ## 1. SQL select :  
-> select * from your_table
+                    > select * from your_table
                     
     
 ### http:
