@@ -1,0 +1,679 @@
+<!doctype HTML>
+<html>
+  <head>
+    <title id="title">httpQL</title>
+    <meta charset="utf-8" />
+
+    
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    
+    
+    <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+     
+   
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    
+    <!-- 
+     
+                           more icon at :  https://materialdesignicons.com     
+                           https://dev.materialdesignicons.com/getting-started/webfont#setup  
+     
+     
+     --> 
+      <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.3.45/css/materialdesignicons.min.css">
+    
+    
+    
+     
+
+
+
+  </head>
+
+
+      <body class="grey lighten-3">
+   
+      
+      
+        <nav>
+          <div class="nav-wrapper black">
+
+
+            <a href="#" class="brand-logo">HttpQL specification v1.0</a>
+
+           
+             <!--
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="sass.html">Sass</a></li>
+              <li><a href="badges.html">Components</a></li>
+              <li><a href="collapsible.html">JavaScript</a></li>
+            </ul>
+             --> 
+
+          </div>
+        </nav>
+      
+      </br>
+    
+        <div class="row">
+          <div class="col s12 m12">
+            <div class="card">
+              <div class="card-content">
+
+                <span class="card-title"> Run <strong class="green-text">SQL</strong> via <strong class="blue-text">http</strong> protocol</span>
+                <p>The HTTP methods, which are used for RESTful Web Services, map neatly to the common SQL statements.</p>
+
+                <table class="responsive-table centered highlight">
+                  <thead>
+                    <tr>
+                        <th>CRUD  OPERATION</th>
+                        <th><strong class="blue-text">HTTP</strong>  METHOD</th>
+                        <th><strong class="green-text">SQL</strong>  STATEMENT</th>
+                    </tr>
+                  </thead>
+          
+                  <tbody>
+                    <tr>
+                      <td>Create</td>
+                      <td><strong class="blue-text">POST</strong></td>
+                      <td><strong class="lime-text">INSERT</strong></td>
+                    </tr>
+                    <tr>
+                      <td>Read</td>
+                      <td><strong class="blue-text">GET</strong></td>
+                      <td><strong class="green-text">SELECT</strong></td>
+                    </tr>
+                    <tr>
+                      <td>Update</td>
+                      <td><strong class="blue-text">PUT</strong></td>
+                      <td><strong class="lime-text">UPDATE</strong></td>
+                    </tr>
+
+                    <tr>
+                      <td>Delete</td>
+                      <td><strong class="blue-text">DELETE</strong></td>
+                      <td><strong class="lime-text">DELETE</strong></td>
+                    </tr>
+
+
+
+                  </tbody>
+                </table>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+  
+
+
+
+
+        <div class="row">
+          <div class="col s12 m12">
+            <div class="card">
+              <div class="card-content">
+
+
+                <span class="card-title">1. &nbsp;&nbsp;SQL <strong class="green-text">SELECT</strong></span>
+
+               <blockquote> 
+                &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <strong class="green-text">SELECT</strong> * FROM your_table
+                </blockquote>
+
+              </br>
+
+                <span class="card-title">http</span>
+
+                <blockquote> 
+                  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <strong class="blue-text">GET</strong> /your_table
+                 </blockquote>
+               
+
+                </br>
+
+                 <span class="card-title">URL</span>
+
+                 <blockquote> 
+                  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    https://...context.../your_table
+                  </blockquote>
+                
+
+
+                </br>
+
+                <span class="card-title">Example 1</span>
+
+                <blockquote> 
+                             
+
+
+                        &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Get all arcgis server list
+
+                        </br>
+
+                        </br> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SQL statement (table name : rest_url)
+                    
+                            </br>
+                          
+                            </br> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;select * from rest_url 
+
+                            </br>
+
+                            </br> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click URL with Node.js implement  (.../restapi/...)
+                          
+                            </br>
+
+                            </br>  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                  <a target="_blank" href="https://transparentgov.net:3200/restapi/rest_url">
+
+                                      https://transparentgov.net:3200/restapi/rest_url
+
+                                    </a>
+                          
+
+
+                      
+                  </blockquote>
+
+
+
+
+
+                </br>
+
+                <span class="card-title">Example 2</span>
+
+                <blockquote> 
+                             
+
+
+                        &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Get all socrata open data domain
+
+                        </br>
+
+                        </br> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SQL statement (table name : domain_list)
+                    
+                            </br>
+                          
+                            </br> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;select * from domain_list 
+
+                            </br>
+
+                            </br> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click URL with Node.js implement  (.../restapi/...)
+                          
+                            </br>
+
+                            </br>  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                  <a target="_blank" href="https://transparentgov.net:3200/restapi/domain_list">
+
+                                    https://transparentgov.net:3200/restapi/domain_list
+
+                                    </a>
+                          
+
+
+
+
+              </div>
+             
+            </div>
+          </div>
+        </div>
+  
+
+
+
+
+        <div class="row">
+          <div class="col s12 m12">
+            <div class="card">
+              <div class="card-content">
+
+
+                <span class="card-title">2. &nbsp;&nbsp; SQL <strong class="green-text">SELECT</strong> with where, order by, sort etc.</span>
+
+               <blockquote> 
+                &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong class="green-text">SELECT</strong> * FROM your_table where type='xxx' order by 'yyy' asc
+                </blockquote>
+
+              </br>
+
+                <span class="card-title">http</span>
+
+                <blockquote> 
+                  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong class="blue-text">GET</strong> /your_table
+                 </blockquote>
+               
+                </br>
+
+
+                 <span class="card-title">URL</span>
+
+                 <blockquote> 
+                               
+
+
+                  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  https://...context.../your_table?<strong class="green-text">select</strong>=*</br>
+                     &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &where=type%3D%27xxx%27</br>
+                     &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &orderby=yyy</br>
+                     &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &asc_desc=asc  </br>
+
+                                                            </br>
+                                                            </br>
+
+                  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    where type='xxx' must be encoded as type%3D%27xxx%27
+                                                             
+                  </blockquote>
+                
+                </br>
+
+                  <span class="card-title">Example 1</span>
+
+                  <blockquote> 
+                               
+
+
+                          &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Get all arcgis server list sort by name
+
+                          </br>
+
+                          </br> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SQL statement (table name : rest_url)
+                      
+                              </br>
+                            
+                              </br> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;select * from rest_url where type='folder' or type='hub' order by name asc
+
+                              </br>
+
+                              </br> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click URL with Node.js implement  (.../restapi/...)
+                            
+                              </br>
+
+                              </br>  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                    <a target="_blank" href="https://transparentgov.net:3200/restapi/rest_url?select=*&orderby=name&asc_desc=asc&where=type%3D'folder'%20or%20type%3D'hub'">
+
+                                        https://transparentgov.net:3200/restapi/rest_url?select=*&orderby=name&asc_desc=asc&where=type%3D'folder'%20or%20type%3D'hub'
+
+                                      </a>
+                            
+
+
+                        
+                    </blockquote>
+
+
+
+
+
+                  </br>
+
+                  <span class="card-title">Example 2</span>
+
+                  <blockquote> 
+                               
+
+
+                          &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Get all socrata open data domain sort by organization
+
+                          </br>
+
+                          </br> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SQL statement (table name : domain_list)
+                      
+                              </br>
+                            
+                              </br> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;select * from domain_list order by organization asc
+
+                              </br>
+
+                              </br> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click URL with Node.js implement  (.../restapi/...)
+                            
+                              </br>
+
+                              </br>  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                    <a target="_blank" href="https://transparentgov.net:3200/restapi/domain_list?select=*&orderby=organization&asc_desc=asc">
+
+                                      https://transparentgov.net:3200/restapi/domain_list?select=*&orderby=organization&asc_desc=asc
+
+                                      </a>
+                            
+
+
+                        
+                    </blockquote>
+
+              </div>
+             
+            </div>
+          </div>
+        </div>
+  
+
+
+
+
+        <div class="row">
+          <div class="col s12 m12">
+            <div class="card">
+              <div class="card-content">
+
+
+                <span class="card-title">3.  &nbsp;&nbsp; SQL <strong class="green-text">SELECT</strong> multiple table</span>
+
+               <blockquote> 
+                     &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <strong class="green-text">SELECT</strong> * FROM a, b, c where a.id=b.customerID .....
+                      
+                    </br>
+                    </br> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can create a view for this complex sql as your_view
+
+                </blockquote>
+
+              </br>
+
+                <span class="card-title">http</span>
+
+                <blockquote> 
+                                &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <strong class="blue-text">GET</strong> /your_view
+                 </blockquote>
+               
+                </br>
+
+
+                 <span class="card-title">URL</span>
+
+                 <blockquote> 
+                            &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    https://...context.../your_view?<strong class="green-text">select</strong>=*  
+                  </blockquote>
+                
+
+
+
+
+
+
+              </div>
+             
+            </div>
+          </div>
+        </div>
+  
+
+
+        <div class="row">
+          <div class="col s12 m12">
+            <div class="card">
+              <div class="card-content">
+
+
+                <span class="card-title">4.  &nbsp;&nbsp; SQL <strong class="lime-text">INSERT</strong> </span>
+
+               <blockquote> 
+                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <strong class="lime-text">INSERT</strong> INTO your_table (column_name1, column_name2, column_name3) 
+                    </br> 
+                    </br> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VALUES ("value1", "value2", "value3");   
+
+                </blockquote>
+
+              </br>
+
+                <span class="card-title">http</span>
+
+                <blockquote> 
+                  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <strong class="blue-text">POST</strong> /your_table
+                  </br>
+                  
+                            </br>   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  {
+                            </br>   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;   "column_name1": "value1",
+                            </br>   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;   "column_name2": "value2",
+                            </br>   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;   "column_name3": "value3"
+                            </br>   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  }
+
+                 </blockquote>
+               
+                </br>
+
+
+                 <span class="card-title">URL</span>
+
+                 <blockquote> 
+
+                         &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    must provide security pin for <strong class="lime-text">update, insert, delete,</strong> no pin required for <strong class="green-text">select</strong> 
+                        </br>
+                        </br>  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    https://...context.../your_table?pin=123456789 
+
+                  </blockquote>
+                
+
+
+
+
+
+
+              </div>
+             
+            </div>
+          </div>
+        </div>
+  
+
+
+
+
+        <div class="row">
+          <div class="col s12 m12">
+            <div class="card">
+              <div class="card-content">
+
+
+                <span class="card-title">5.  &nbsp;&nbsp; SQL <strong class="lime-text">UPDATE</strong> all columns</span>
+
+               <blockquote> 
+                          &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <strong class="lime-text">UPDATE</strong> your_table
+                   
+                    </br> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   SET id = 2,   
+                    </br> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; column_name1 = "value1", 
+                    </br> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; column_name2 = "value2", 
+                    </br> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; column_name3 = "value3"
+                    </br> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   WHERE id = 2; 
+
+
+                </blockquote>
+
+              </br>
+
+                <span class="card-title">http</span>
+
+                <blockquote> 
+                  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <strong class="blue-text">PUT</strong> /your_table?where=id=2
+                  </br>
+                  
+                            </br>   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  {
+                            </br>   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;   "id": 2,
+                            </br>   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;   "column_name1": "value1",
+                            </br>   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;   "column_name2": "value2",
+                            </br>   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;   "column_name3": "value3"
+                            </br>   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  }
+
+                 </blockquote>
+               
+                </br>
+
+
+                 <span class="card-title">URL</span>
+
+                 <blockquote> 
+                         &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    where clause  id = 2 must be encoded as id%3D2
+                        </br> 
+                        </br>  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    https://...context.../your_table? where=id%3D2 & pin=123456789 
+
+                      
+                  
+                                </br>   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  {
+                                </br>   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;   "id": 2,
+                                </br>   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;   "column_name1": "value1",
+                                </br>   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;   "column_name2": "value2",
+                                </br>   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;   "column_name3": "value3"
+                                </br>   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  }
+                  </blockquote>
+                
+
+
+
+
+
+
+              </div>
+             
+            </div>
+          </div>
+        </div>
+  
+
+
+
+
+        <div class="row">
+          <div class="col s12 m12">
+            <div class="card">
+              <div class="card-content">
+
+
+                <span class="card-title">6.  &nbsp;&nbsp; SQL <strong class="lime-text">UPDATE</strong> only some of the columns</span>
+
+               <blockquote> 
+                                        &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <strong class="lime-text">UPDATE</strong> your_table
+                                        </br> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; column_name3 = "value3"
+                                        </br> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   WHERE id = 2; 
+
+
+                </blockquote>
+
+
+                </br>
+
+
+                <span class="card-title">http</span>
+
+                <blockquote> 
+                  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <strong class="blue-text">PATCH</strong> /your_table?where=id=2
+                  </br>
+                  
+                            </br>   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  {
+                            </br>   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;   "column_name3": "value3"
+                            </br>   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  }
+
+                 </blockquote>
+               
+                </br>
+
+
+                 <span class="card-title">URL</span>
+
+                 <blockquote> 
+                         &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    where clause  id = 2 must be encoded as id%3D2
+                        </br> 
+                        </br>  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    https://...context.../your_table? where=id%3D2 & pin=123456789 
+
+                      
+                  
+                                </br>   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  {
+                                </br>   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;   "column_name3": "value3"
+                                </br>   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  }
+                  </blockquote>
+                
+                </br>
+
+
+                  <span class="card-title">Note</span>
+
+                  <blockquote> 
+                                 &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  The difference between <strong class="blue-text">PUT</strong> and <strong class="blue-text">PATCH</strong> is that PUT must update all fields to make it idempotent. 
+                        
+                                    This fancy word basically means that you must always get the same result no matter how many times it is executed. 
+ 
+                       
+                   
+                                   This is important in network traffic, because if you’re in doubt whether your request has been lost during transmission, 
+                                 
+                                   you can just send it again without worrying about messing up the resource’s data.
+                   </blockquote>
+
+
+
+              </div>
+             
+            </div>
+          </div>
+        </div>
+  
+
+
+
+
+        <div class="row">
+          <div class="col s12 m12">
+            <div class="card">
+              <div class="card-content">
+
+
+                <span class="card-title">7. &nbsp;&nbsp;SQL <strong class="lime-text">DELETE</strong></span>
+
+               <blockquote> 
+                &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <strong class="lime-text">DELETE</strong> * FROM your_table  WHERE id = 2;
+                </blockquote>
+
+
+                  </br>
+
+                <span class="card-title">http</span>
+
+                <blockquote> 
+                  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <strong class="blue-text">DELETE</strong> /your_table?where=id=2
+                 </blockquote>
+               
+                  </br>
+
+
+                 <span class="card-title">URL</span>
+
+                 <blockquote> 
+                  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  where id = 2 must be encoded as id%3D2
+                  </br>
+                  </br>
+                  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    https://...context.../your_table? where=id%3D2 & pin=123456789 
+                  </blockquote>
+                
+
+
+
+
+
+
+              </div>
+             
+            </div>
+          </div>
+        </div>
+  
+
+
+
+
+        
+
+      </body>
+</html>

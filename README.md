@@ -36,13 +36,54 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
                      GET /your_table
       URL :                
       
-                    ...context/your_table?select=*   
+                    https://...context.../your_table?select=*  
+                    
+      Example 1:
+      
+                    
+                    Get all arcgis server list
+
+
+
+                    SQL statement (table name : rest_url): 
+               
+
+               
+                                    select * from rest_url 
+
+
+
+                    Node.js implement  (.../restapi/...) URL : 
+               
+
+
+                                     https://transparentgov.net:3200/restapi/rest_url
+      Example 2:
+
+
+                     Get all socrata open data domain
+
+
+
+                     SQL statement (table name : domain_list): 
+                     
+                     
+                     
+                                          select * from domain_list
+                                          
+
+
+
+                     Node.js implement  (.../restapi/...) URL : 
+                     
+
+
+                                          https://transparentgov.net:3200/restapi/domain_list
+                                   
                     
                     
                     
-                    
-                    
-2. SQL select with where, order by, sort clause:
+2. SQL select with where, order by, sort etc.:
 
                     select * from your_table where type='xxx' order by 'yyy' asc
           
@@ -54,10 +95,59 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
                     
                     where type='xxx' must be encoded as type%3D%27xxx%27
                     
-                    ...context/your_table?select=*
+                    https://...context.../your_table?select=*
                                                   &where=type%3D%27xxx%27
                                                   &orderby=yyy
                                                   &asc_desc=asc
+
+      Example 1:
+      
+                    
+                    Get all arcgis server list sort by name
+
+
+
+                    SQL statement (table name : rest_url): 
+               
+
+               
+                                    select * from rest_url where type='folder' or type='hub' order by name asc
+
+
+
+                    Node.js implement  (.../restapi/...) URL : 
+               
+
+
+                                     https://transparentgov.net:3200/restapi/rest_url?select=*&orderby=name&asc_desc=asc&where=type%3D'folder'%20or%20type%3D'hub'
+               
+      Example 2:
+
+
+                     Get all socrata open data domain sort by organization
+
+
+
+                     SQL statement (table name : domain_list): 
+                     
+                     
+                     
+                                          select * from domain_list order by organization asc
+
+
+
+                     Node.js implement  (.../restapi/...) URL : 
+                     
+
+
+                                          https://transparentgov.net:3200/restapi/domain_list?select=*&orderby=organization&asc_desc=asc
+                     
+
+
+
+
+
+
 3. SQL select multiple table :
 
                     select * from a, b, c where a.id=b.customerID .....
@@ -70,7 +160,7 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
     
      URL:             
      
-                    ...context/your_view?select=* 
+                    https://...context.../your_view?select=* 
         
         
         
@@ -94,7 +184,7 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
               
               must provide security pin for update, insert, delete, no pin required for select 
               
-              ...context/your_table?pin=123456789    
+              https://...context.../your_table?pin=123456789    
                
                 {
                     "column_name1": "value1",
@@ -132,7 +222,7 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
     
            where clause  id = 2 must be encoded as id%3D2
         
-           ...context/your_table? where=id%3D2 & pin=123456789 
+           https://...context.../your_table? where=id%3D2 & pin=123456789 
 
              {
                 "id": 2, 
@@ -163,7 +253,7 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
       
               where id = 2 must be encoded as id%3D2
               
-                ...context/your_table? where=id%3D2 & pin=123456789 
+                https://...context.../your_table? where=id%3D2 & pin=123456789 
 
                      {
                        "column_name3": "value3"
@@ -195,8 +285,10 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
       
                 where id = 2 must be encoded as id%3D2
               
-                ...context/your_table? where=id%3D2 & pin=123456789 
+                https://...context.../your_table? where=id%3D2 & pin=123456789 
 
 
 
               
+  
+      
