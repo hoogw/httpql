@@ -26,34 +26,44 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
 > select * from your_table
                     
     
-##### http
+- http
 > GET /your_table
 
 
-##### URL                
+- URL                
 > https://...context.../your_table
 
 
 
-##### Example 1
+- Example 1
                   
-  Get all arcgis server list
+  - Get all arcgis server list
 
-> select * from rest_url 
+  - SQL: 
+  > select * from rest_url 
 
-  [https://transparentgov.net:3200/restapi/rest_url](https://transparentgov.net:3200/restapi/rest_url)
+  - URL: [https://transparentgov.net:3200/restapi/rest_url](https://transparentgov.net:3200/restapi/rest_url)
 
 
 
-##### Example 2
 
-  Get all socrata open data domain
-                 
-> select * from domain_list
 
-  [https://transparentgov.net:3200/restapi/domain_list](https://transparentgov.net:3200/restapi/domain_list)
+
+
+
+- Example 2
+
+  - Get all socrata open data domain
+   
+  - SQL:               
+  > select * from domain_list
+
+  - URL: [https://transparentgov.net:3200/restapi/domain_list](https://transparentgov.net:3200/restapi/domain_list)
                                    
                     
+                    
+
+
                     
                     
 ## 2. SQL select with where, order by, sort etc.
@@ -89,7 +99,7 @@ Get all arcgis server list sort by name
 
 ##### Example 2
  Get all socrata open data domain sort by organization
- 
+
  >select * from domain_list order by organization asc
  
 [https://transparentgov.net:3200/restapi/domain_list?select=*&orderby=organization&asc_desc=asc](https://transparentgov.net:3200/restapi/domain_list?select=*&orderby=organization&asc_desc=asc)
