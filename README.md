@@ -105,8 +105,8 @@ You should create a view for this complex sql as your_view
 
 ## 4. SQL insert
 
-> INSERT INTO your_table (column_name1, column_name2, column_name3) 
-> VALUES ("value1", "value2", "value3");       
+            INSERT INTO your_table (column_name1, column_name2, column_name3) 
+            VALUES ("value1", "value2", "value3");       
            
 - Http Verb 
 
@@ -147,7 +147,7 @@ You should create a view for this complex sql as your_view
                     WHERE id = 2;        
                     
                     
-     http: 
+- Http Verb 
              
             
              PUT /your_table?where=id=2
@@ -160,10 +160,8 @@ You should create a view for this complex sql as your_view
              }
                     
                     
-    URL:    
+- URL    
     
-           where clause  id = 2 must be encoded as id%3D2
-        
            https://...context.../your_table? where=id%3D2 & pin=123456789 
 
              {
@@ -174,15 +172,19 @@ You should create a view for this complex sql as your_view
              }
 
 
+           where clause  id = 2 must be encoded as id%3D2
+        
+
+
+
+
 ## 6. SQL update only some of the columns:
 
                  UPDATE your_table
                  SET column_name3 = "value3"
                  WHERE id = 2;
 
-     http: 
-             
-             
+- Http Verb 
             
              PATCH /your_table?where=id=2
 
@@ -191,18 +193,20 @@ You should create a view for this complex sql as your_view
              }
              
 
-     URL:    
+- URL   
       
-              where id = 2 must be encoded as id%3D2
+              
               
                 https://...context.../your_table? where=id%3D2 & pin=123456789 
 
                      {
                        "column_name3": "value3"
                      }
+
+                 where id = 2 must be encoded as id%3D2
              
              
-     Note: 
+- Note: 
      
               The difference between PUT and PATCH is that PUT must update all fields to make it idempotent. 
               This fancy word basically means that you must always get the same result no matter how many times it is executed. 
@@ -218,18 +222,18 @@ You should create a view for this complex sql as your_view
                DELETE FROM your_table WHERE id = 2;
                
 
-      http: 
+- Http Verb 
              
                DELETE /your_table?where=id=2
                
                
-      URL:     
+- URL      
       
-                where id = 2 must be encoded as id%3D2
-              
+                
                 https://...context.../your_table? where=id%3D2 & pin=123456789 
 
-
+               where id = 2 must be encoded as id%3D2
+              
 
               
   
