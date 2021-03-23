@@ -22,82 +22,76 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
 
 
 
-## 1. SQL select :  
+## 1. SQL select
 > select * from your_table
                     
     
-##### http:
+##### http
 > GET /your_table
 
 
-##### URL :                
-> https://...context.../your_table?select=*  
+##### URL                
+> https://...context.../your_table
 
 
 
-##### Example 1:
+##### Example 1
                   
-Get all arcgis server list
+  Get all arcgis server list
 
-SQL statement (table name : rest_url): 
-               
 > select * from rest_url 
 
-Node.js implement  (.../restapi/...) URL : 
-    
-[https://transparentgov.net:3200/restapi/rest_url](https://transparentgov.net:3200/restapi/rest_url)
+  [https://transparentgov.net:3200/restapi/rest_url](https://transparentgov.net:3200/restapi/rest_url)
 
 
 
-##### Example 2:
+##### Example 2
 
-Get all socrata open data domain
-SQL statement (table name : domain_list): 
-                      
+  Get all socrata open data domain
+                 
 > select * from domain_list
-                     
-Node.js implement  (.../restapi/...) URL : 
-     
-[https://transparentgov.net:3200/restapi/domain_list](https://transparentgov.net:3200/restapi/domain_list)
+
+  [https://transparentgov.net:3200/restapi/domain_list](https://transparentgov.net:3200/restapi/domain_list)
                                    
                     
                     
                     
-## 2. SQL select with where, order by, sort etc.:
+## 2. SQL select with where, order by, sort etc.
 
 > select * from your_table where type='xxx' order by 'yyy' asc
           
-##### http:
+##### http
       
 > GET /your_table    
           
-##### URL :  
-                    
-> where type='xxx' must be encoded as type%3D%27xxx%27
-                    
+##### URL 
+                     
 > https://...context.../your_table?select=*
+
 >                                           &where=type%3D%27xxx%27
+
 >                                           &orderby=yyy
+
 >                                           &asc_desc=asc
 
-##### Example 1:
+
+>  Note:  where clause type='xxx' must be encoded as type%3D%27xxx%27
+
+##### Example 1
 
 Get all arcgis server list sort by name
-SQL statement (table name : rest_url):
                                     
 > select * from rest_url where type='folder' or type='hub' order by name asc
-
-Node.js implement  (.../restapi/...) URL : 
 
 [https://transparentgov.net:3200/restapi/rest_url?select=*&orderby=name&asc_desc=asc&where=type%3D'folder'%20or%20type%3D'hub'](https://transparentgov.net:3200/restapi/rest_url?select=*&orderby=name&asc_desc=asc&where=type%3D'folder'%20or%20type%3D'hub')
 
 
 
-##### Example 2:
+##### Example 2
  Get all socrata open data domain sort by organization
- SQL statement (table name : domain_list):
+ 
  >select * from domain_list order by organization asc
- Node.js implement  (.../restapi/...) URL :
+ 
 [https://transparentgov.net:3200/restapi/domain_list?select=*&orderby=organization&asc_desc=asc](https://transparentgov.net:3200/restapi/domain_list?select=*&orderby=organization&asc_desc=asc)
                      
 
