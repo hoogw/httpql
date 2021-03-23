@@ -26,17 +26,15 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
 > select * from your_table
                     
     
-- http
-> GET /your_table
+- http verb  `GET /your_table`
 
 
-- URL                
-> https://...context.../your_table
+- URL `https://...context.../your_table`
 
 
 
-- Example 1:  Get all arcgis server list
-    - SQL:  select * from rest_url 
+- Example 1:  `Get all arcgis server list`
+    - SQL:  `select * from rest_url` 
     - URL: [https://transparentgov.net:3200/restapi/rest_url](https://transparentgov.net:3200/restapi/rest_url)
 
 
@@ -46,8 +44,8 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
 
 
 
-- Example 2:  Get all socrata open data domain
-    - SQL:  select * from domain_list
+- Example 2:  `Get all socrata open data domain`
+    - SQL:  `select * from domain_list`
     - URL:  [https://transparentgov.net:3200/restapi/domain_list](https://transparentgov.net:3200/restapi/domain_list)
                                    
                     
@@ -60,9 +58,7 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
 
 > select * from your_table where type='xxx' order by 'yyy' asc
           
-- http
-      
-> GET /your_table    
+- http verb `GET /your_table`   
           
 - URL 
                      
@@ -77,15 +73,15 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
 >
 >  Note:  where clause type='xxx' must be encoded as type%3D%27xxx%27
 
-- Example 1:  Get all arcgis server list sort by name
+- Example 1:  `Get all arcgis server list sort by name`
     - SQL:  `select * from rest_url where type='folder' or type='hub' order by name asc`
-    - URL:  `[https://transparentgov.net:3200/restapi/rest_url?select=*&orderby=name&asc_desc=asc&where=type%3D'folder'%20or%20type%3D'hub'](https://transparentgov.net:3200/restapi/rest_url?select=*&orderby=name&asc_desc=asc&where=type%3D'folder'%20or%20type%3D'hub')`
+    - URL:  [https://transparentgov.net:3200/restapi/rest_url?select=*&orderby=name&asc_desc=asc&where=type%3D'folder'%20or%20type%3D'hub'](https://transparentgov.net:3200/restapi/rest_url?select=*&orderby=name&asc_desc=asc&where=type%3D'folder'%20or%20type%3D'hub')
 
 
 
-- Example 2: Get all socrata open data domain sort by organization
+- Example 2: `Get all socrata open data domain sort by organization`
     - SQL:  `select * from domain_list order by organization asc`
-    - URL:  `[https://transparentgov.net:3200/restapi/domain_list?select=*&orderby=organization&asc_desc=asc](https://transparentgov.net:3200/restapi/domain_list?select=*&orderby=organization&asc_desc=asc)`
+    - URL:  [https://transparentgov.net:3200/restapi/domain_list?select=*&orderby=organization&asc_desc=asc](https://transparentgov.net:3200/restapi/domain_list?select=*&orderby=organization&asc_desc=asc)
                      
 
 
