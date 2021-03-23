@@ -23,7 +23,7 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
 
 
 ## 1. SQL select
-> select * from your_table
+                 select * from your_table
                     
     
 - Http Verb  `GET /your_table`
@@ -56,21 +56,17 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
                     
 ## 2. SQL select with where, order by, sort etc.
 
-> select * from your_table where type='xxx' order by 'yyy' asc
+                  select * from your_table where type='xxx' order by 'yyy' asc
           
 - Http Verb `GET /your_table`   
           
 - URL 
                      
->          https://...context.../your_table?select=*
->
->                                           &where=type%3D%27xxx%27
->
->                                           &orderby=yyy
->
->                                           &asc_desc=asc
->
->
+         https://...context.../your_table?select=*
+                                                   &where=type%3D%27xxx%27
+                                                   &orderby=yyy
+                                                   &asc_desc=asc
+
 >  Note:  where clause type='xxx' must be encoded as type%3D%27xxx%27
 
 - Example 1:  `Get all arcgis server list sort by name`
@@ -91,7 +87,7 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
 
 ## 3. SQL select multiple table 
 
-> select * from a, b, c where a.id=b.customerID .....
+                   select * from a, b, c where a.id=b.customerID .....
                     
 You should create a view for this complex sql as your_view
     
@@ -131,8 +127,7 @@ You should create a view for this complex sql as your_view
                     "column_name3": "value3"
                 }
 
-
-                must provide security pin for update, insert, delete, no pin required for select 
+> Note: must provide security pin for update, insert, delete, no pin required for select 
                 
                 
                 
@@ -172,7 +167,7 @@ You should create a view for this complex sql as your_view
              }
 
 
-           where clause  id = 2 must be encoded as id%3D2
+>Note: where clause  id = 2 must be encoded as id%3D2
         
 
 
@@ -203,7 +198,6 @@ You should create a view for this complex sql as your_view
                        "column_name3": "value3"
                      }
 
-                 where id = 2 must be encoded as id%3D2
              
              
 - Note: 
@@ -232,7 +226,7 @@ You should create a view for this complex sql as your_view
                 
                 https://...context.../your_table? where=id%3D2 & pin=123456789 
 
-               where id = 2 must be encoded as id%3D2
+>Note: where id = 2 must be encoded as id%3D2
               
 
               
