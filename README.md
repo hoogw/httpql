@@ -1,23 +1,20 @@
 # httpQL
-run SQL via http protocol
-
-Specification only, No implementation, No opinion, Simple, Flexible, Powerful
 
 
-The demon is a httpQL implementation in Node.js. You are free to write your own implementation in any language. 
 
+[ HttpQL specification v1.0 ](https://transparentgov.net/httpql/index.html)
 
-CRUD Operations 
+## run SQL via http protocol
 
 The HTTP methods, which are used for RESTful Web Services, map neatly to the common SQL statements:
  
  
-    CRUD OPERATION	            HTTP METHOD	          SQL STATEMENT
-    
-     Create	                      POST	                 INSERT
-     Read	                        GET	                  SELECT
-     Update	                      PUT      	            UPDATE
-     Delete	                      DELETE	               DELETE
+   | CRUD OPERATION	 |    HTTP METHOD	  | SQL STATEMENT    |
+   |:----------------:|:----------------:|:----------------:|
+   |  Create	       |    POST	        |   INSERT         |
+   |  Read	          |    GET	        |   SELECT         |
+   |  Update	       |    PUT      	  |   UPDATE         |
+   |  Delete	       |    DELETE	     |   DELETE         |
      
      
      
@@ -25,7 +22,7 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
 
 
 
-1. SQL select :  
+## 1. SQL select :  
  
                     select * from your_table
                     
@@ -83,7 +80,7 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
                     
                     
                     
-2. SQL select with where, order by, sort etc.:
+## 2. SQL select with where, order by, sort etc.:
 
                     select * from your_table where type='xxx' order by 'yyy' asc
           
@@ -148,7 +145,7 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
 
 
 
-3. SQL select multiple table :
+## 3. SQL select multiple table :
 
                     select * from a, b, c where a.id=b.customerID .....
                     
@@ -164,7 +161,7 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
         
         
         
-4. SQL insert
+## 4. SQL insert
 
            INSERT INTO your_table (column_name1, column_name2, column_name3) 
            VALUES ("value1", "value2", "value3");       
@@ -195,7 +192,7 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
                 
                 
         
-5. SQL update all columns: 
+## 5. SQL update all columns: 
 
                    UPDATE your_table
                       SET id = 2, 
@@ -232,7 +229,7 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
              }
 
 
-6. SQL update only some of the columns:
+## 6. SQL update only some of the columns:
 
                  UPDATE your_table
                  SET column_name3 = "value3"
@@ -270,7 +267,7 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
               
               
 
-7. SQL delete:
+## 7. SQL delete:
 
 
                DELETE FROM your_table WHERE id = 2;
