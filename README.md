@@ -26,7 +26,7 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
 > select * from your_table
                     
     
-- http verb  `GET /your_table`
+- Http Verb  `GET /your_table`
 
 
 - URL `https://...context.../your_table`
@@ -58,7 +58,7 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
 
 > select * from your_table where type='xxx' order by 'yyy' asc
           
-- http verb `GET /your_table`   
+- Http Verb `GET /your_table`   
           
 - URL 
                      
@@ -89,29 +89,27 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
 
 
 
-## 3. SQL select multiple table :
+## 3. SQL select multiple table 
 
-                    select * from a, b, c where a.id=b.customerID .....
+> select * from a, b, c where a.id=b.customerID .....
                     
-                    You should create a view for this complex sql as your_view
+You should create a view for this complex sql as your_view
     
-     http:
-      
-                     GET /your_view    
-    
-     URL:             
-     
-                    https://...context.../your_view?select=* 
+- Http Verb  `GET /your_view` 
+  
+- URL `https://...context.../your_view?select=*`
         
         
         
+
+
 ## 4. SQL insert
 
-           INSERT INTO your_table (column_name1, column_name2, column_name3) 
-           VALUES ("value1", "value2", "value3");       
+> INSERT INTO your_table (column_name1, column_name2, column_name3) 
+> VALUES ("value1", "value2", "value3");       
            
-     http: 
-     
+- Http Verb 
+
              POST /your_table
 
              {
@@ -121,9 +119,9 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
              }
         
     
-    URL:   
+- URL  
               
-              must provide security pin for update, insert, delete, no pin required for select 
+              
               
               https://...context.../your_table?pin=123456789    
                
@@ -132,6 +130,9 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
                     "column_name2": "value2",
                     "column_name3": "value3"
                 }
+
+
+                must provide security pin for update, insert, delete, no pin required for select 
                 
                 
                 
