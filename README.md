@@ -1,10 +1,10 @@
-# httpQL
+# HttpQL
 
 
 
 [ HttpQL specification v1.0 ](https://transparentgov.net/httpql/index.html)
 
-## run SQL via http protocol
+## Run SQL via http protocol
 
 The HTTP methods, which are used for RESTful Web Services, map neatly to the common SQL statements:
  
@@ -23,17 +23,15 @@ The HTTP methods, which are used for RESTful Web Services, map neatly to the com
 
 
 ## 1. SQL select :  
- 
-                    select * from your_table
+> select * from your_table
                     
     
-        
-      http:
-      
-                     GET /your_table
-      URL :                
-      
-                    https://...context.../your_table?select=*  
+### http:
+> GET /your_table
+
+
+### URL :                
+> https://...context.../your_table?select=*  
                     
       Example 1:
       
